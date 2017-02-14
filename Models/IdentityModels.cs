@@ -27,11 +27,11 @@ namespace DocShare.Models
         }
         public DbSet<TaiLieu> TaiLieus { get; set; }
         public DbSet<ChuyenDe> ChuyenDes { get; set; }
-        public DbSet<BinhLuan> BinhLuans { get; set; }
         public DbSet<NgonNgu> NgonNgus { get; set; }
         public DbSet<TacGia> TacGias { get; set; }
         public DbSet<TuKhoa> TuKhoas { get; set; }
         public DbSet<ThanhVien> ThanhViens { get; set; }
+        public DbSet<BinhLuan> BinhLuans { get; set; }
         public DbSet<Reply> Replies { get; set; }
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<DanhSachTaiLieuYeuTich> DSTLYTs { get; set; }

@@ -9,19 +9,20 @@ namespace DocShare.Models
 {
     public class Reply
     {
+        public virtual BinhLuan BinhLuan { get; set; }
+        public virtual ThanhVien ThanhVien { get; set; }
         [Key]
         public int MaReply { get; set; }
 
-        //[ForeignKey("ThanhVien")]
+        [ForeignKey("ThanhVien")]
         public int MaThanhVien { get; set; }
 
-        //[ForeignKey("BinhLuan")]
+        [ForeignKey("BinhLuan")]
         public int MaBinhLuan { get; set; }
         public string NDReply { get; set; }
         public DateTime NgayReply { get; set; }
 
-        //public virtual BinhLuan BinhLuan { get; set; }
-        //public virtual ThanhVien ThanhVien { get; set; }
+        
 
     }
 }

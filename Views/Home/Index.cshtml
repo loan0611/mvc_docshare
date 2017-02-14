@@ -1,31 +1,36 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
+<body>
+    <div>
+        <select id="sort" name="Sort" style="float:right">
+            <option value="">--Choose--</option>
+            <option value="0">Ngày upload</option>
+            <option value="1">Lượt rating</option>
+            <option selected="selected" value="2">All</option>
+        </select>
+        <label>All: </label><br />
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/Images/TL1.png" />
+            </div>
+            <div class="col-sm-8">
+                <p>Thật ra Lập Trình Hướng Đối Tượng trở nên đáng sợ đối với rất nhiều lập trìnhviên bởi nó mang đến các cú pháp khá mới mẻ và cầu kỳ ,do vậy nó nhanh chóng trở nên phức tạp hơnrất nhiều so với lập trình hướng thủ tục. </p>
+                @Html.ActionLink("Xem chi tiết...", "", "")
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/Images/TL2.png" />
+            </div>
+            <div class="col-sm-8">
+                <p>ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.</p>
+                @Html.ActionLink("Xem chi tiết...", "", "")
+            </div>
+    </div>
+</body>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
