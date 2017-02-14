@@ -1,0 +1,59 @@
+﻿
+@model DocShare.Models.TaiLieu
+@{
+    ViewBag.Title = "Submit";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Submit</h2>
+
+@using (Html.BeginForm("Submit", "DocumentManager", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="form-group">
+        <label class="col-md-2 control-label">
+            Nhan Đề
+        </label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.NhanDe, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">
+            Số Trang
+        </label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.SoTrang, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">
+            Kích Thước
+        </label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.KichThuoc, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">
+            Ghi Chú
+        </label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.GhiChu, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">
+            Tình Trạng
+        </label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.TinhTrang, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
