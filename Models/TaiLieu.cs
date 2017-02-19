@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 
 namespace DocShare.Models
 {
+    [TableName("TaiLieus")]
     public class TaiLieu
     {
         [Key]
@@ -27,17 +29,17 @@ namespace DocShare.Models
         public decimal Phi { get; set; }
         public string TinhTrang { get; set; }
 
-        public virtual ChuyenDe ChuyenDe { get; set; }
-        public virtual NgonNgu NgonNgu { get; set; }
-        public virtual TacGia TacGia { get; set; }
-        public virtual Rating Rating { get; set; }
+        //public virtual ChuyenDe ChuyenDe { get; set; }
+        //public virtual NgonNgu NgonNgu { get; set; }
+        //public virtual TacGia TacGia { get; set; }
+        //public virtual Rating Rating { get; set; }
 
 
-        public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
+        //public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
 
-        public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
+        //public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
 
-        public virtual ICollection<BinhLuan> BinhLuans { get; set; }
+        //public virtual ICollection<BinhLuan> BinhLuans { get; set; }
 
     }
 }

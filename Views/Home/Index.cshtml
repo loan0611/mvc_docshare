@@ -3,8 +3,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
-<body>
-    <div>
+<div>
+    <div class="modal-header">
         <select id="sort" name="Sort" style="float:right">
             <option value="">--Choose--</option>
             <option value="0">Ngày upload</option>
@@ -12,6 +12,7 @@
             <option selected="selected" value="2">All</option>
         </select>
         <label>All: </label><br />
+     </div>
         <div class="row">
             <div class="col-sm-4">
                 <img src="~/Content/Images/TL1.png" />
@@ -30,7 +31,16 @@
                 <p>ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.</p>
                 @Html.ActionLink("Xem chi tiết...", "", "")
             </div>
-    </div>
-</body>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/Images/TL3.png" />
+            </div>
+            <div class="col-sm-8">
+                <p>ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.</p>
+                @Html.ActionLink("Xem chi tiết...", "", "")
+            </div>
+        </div>
+</div>
 
 

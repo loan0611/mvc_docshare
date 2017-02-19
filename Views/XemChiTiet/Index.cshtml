@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-sm-2">
+        <p>@Html.ActionLink("Trang Chủ","","") </p>
+    </div>
+    <div class="col-sm-2">
+        <p>@Html.ActionLink("Kỹ Thuật", "", "") </p>
+    </div>
+    <div class="col-sm-8">
+        <p>@Html.ActionLink("Công Nghệ Thông Tin", "", "") </p>
+    </div>
+    </div>
+<div class="row">
+    <div class="col-sm-2">
+        <img src="~/Content/Images/ND_TL.png" height="100" width="100" />
+    </div>
+    <div class="col-sm-4">
+        <p style="margin-top:40px">Giáo trình thiết kế web</p>
+    </div>
+    <div class="col-sm-3">
+        <p>Lượt Xem</p>
+    </div>
+    <div class="col-sm-3">
+        <p>Lượt Download</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <p style="color:orangered">Chia Sẻ</p>
+    </div>
+    <div class="col-sm-2">
+        <p style="color:orangered">Ngày Upload</p>
+    </div>
+    <div class="col-sm-2">
+        <p style="color:orangered">Loại File</p>
+    </div>
+    <div class="col-sm-2">
+        <p style="color:orangered"> Số Trang</p>
+    </div>
+    <div class="col-sm-2">
+        <p style="color:orangered">Đánh Giá</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="~/Content/Images/ND_TL.png" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6" style="margin-top:5px">
+        <p  style="color:orangered">Tải về xem đầy đủ!</p>
+    </div>
+    <div class="col-sm-6">
+        <button type="button" class="btn btn-default">DownLoad</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <input type="text" style="height:60px; width:350px" />
+    </div>
+    <div class="col-sm-8">
+        <button type="button" class="btn btn-default" style="margin-top:10px; margin-left:15px; height:30px;width:100px">Bình Luận</button>
+    </div>
+</div>
+
+

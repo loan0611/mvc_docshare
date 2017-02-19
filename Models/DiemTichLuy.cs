@@ -12,6 +12,6 @@ namespace DocShare.Models
         public int MaThanhVien { get; set; }
         public int Diem { get; set; }
 
-        public virtual ThanhVien ThanhVien { get; set; }
+        //public virtual ThanhVien ThanhVien { get; set; }
     }
 }

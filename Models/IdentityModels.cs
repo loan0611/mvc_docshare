@@ -38,6 +38,7 @@ namespace DocShare.Models
         public DbSet<LichSuDownload> LichSuDownloads { get; set; }
         public DbSet<TuKhoaTaiLieu> TuKhoaTaiLieus { get; set; }
         public DbSet<DiemTichLuy> DiemTichLuys { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

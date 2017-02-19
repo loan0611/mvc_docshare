@@ -28,10 +28,19 @@ namespace DocShare.Controllers
         [HttpPost]
         public ActionResult Submit(TaiLieu model)
         {
-            model.NgayUpload = DateTime.Now;
-            DBContext.TaiLieus.Add(model);
-            DBContext.SaveChanges();
-            return View();
+            try
+            {
+                model.NgayUpload = DateTime.Now;
+
+                DBContext.TaiLieus.Add(model);
+                DBContext.SaveChanges();
+                return View();
+
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

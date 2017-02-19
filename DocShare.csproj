@@ -199,9 +199,17 @@
     <Compile Include="Controllers\DocumentManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\viduController.cs" />
+    <Compile Include="Controllers\XemChiTietController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702141006137_DBGenerate.cs" />
+    <Compile Include="Migrations\201702141006137_DBGenerate.Designer.cs">
+      <DependentUpon>201702141006137_DBGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BinhLuan.cs" />
     <Compile Include="Models\ChuyenDe.cs" />
@@ -228,6 +236,7 @@
     <Content Include="Content\Images\banner-ebook.png" />
     <Content Include="Content\Images\book-creation-banner.jpg" />
     <Content Include="Content\Images\cooltext230047489617997.png" />
+    <Content Include="Content\Images\ND_TL.png" />
     <Content Include="Content\Images\TL1.png" />
     <Content Include="Content\Images\TL2.png" />
     <Content Include="Content\Images\TL3.png" />
@@ -286,6 +295,9 @@
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\DocumentManager\Index.cshtml" />
     <Content Include="Views\DocumentManager\Submit.cshtml" />
+    <Content Include="Views\XemChiTiet\Index.cshtml" />
+    <Content Include="Views\Upload\Index.cshtml" />
+    <Content Include="Views\vidu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,6 +309,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702141006137_DBGenerate.resx">
+      <DependentUpon>201702141006137_DBGenerate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -12,7 +12,7 @@ namespace DocShare.Models
         public int MaTuKhoa { get; set; }
         public int MaTaiLieu { get; set; }
 
-        public virtual TuKhoa TuKhoa { get; set; }
-        public virtual TaiLieu TaiLieu { get; set; }
+        //public virtual TuKhoa TuKhoa { get; set; }
+        //public virtual TaiLieu TaiLieu { get; set; }
     }
 }

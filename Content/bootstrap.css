@@ -41,7 +41,6 @@ canvas,
 video {
   display: inline-block;
 }
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -1718,9 +1717,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 400px;
   height: 34px;
   padding: 6px 12px;
+  margin:5px;
   font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
@@ -2052,6 +2052,7 @@ fieldset[disabled] .btn {
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
+  margin-top:5px;
 }
 
 .btn-default:hover,
@@ -5258,7 +5259,7 @@ a.thumbnail:focus {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+
 }
 
 .list-group-item:first-child {
