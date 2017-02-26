@@ -1,0 +1,67 @@
+﻿@model DocShare.Models.Rating
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rating</h2>
+
+@using (Html.BeginForm("Create", "Rating", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong 1 Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.SL1Sao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong 2 Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.SL2Sao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong 3 Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.SL3Sao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong 4 Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.SL4Sao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong 5 Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.SL5Sao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            So Luong TB Sao
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.TBSao, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
+

@@ -1,0 +1,26 @@
+﻿@model DocShare.Models.TacGia
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TacGia</h2>
+
+@using (Html.BeginForm("Create", "TacGia", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tên Tac Gia
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.TenTacGia, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}

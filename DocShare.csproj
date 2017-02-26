@@ -77,6 +77,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -196,18 +200,36 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BinhLuanController.cs" />
+    <Compile Include="Controllers\ChuyenDeController.cs" />
+    <Compile Include="Controllers\DangNhapController.cs" />
+    <Compile Include="Controllers\DiemTichLuyController.cs" />
     <Compile Include="Controllers\DocumentManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NgonNguController.cs" />
+    <Compile Include="Controllers\RatingController.cs" />
+    <Compile Include="Controllers\TacGiaController.cs" />
+    <Compile Include="Controllers\ThanhVienController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
+    <Compile Include="Controllers\TuKhoaController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\viduController.cs" />
     <Compile Include="Controllers\XemChiTietController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702141006137_DBGenerate.cs" />
-    <Compile Include="Migrations\201702141006137_DBGenerate.Designer.cs">
-      <DependentUpon>201702141006137_DBGenerate.cs</DependentUpon>
+    <Compile Include="Migrations\201702200928278_Init.cs" />
+    <Compile Include="Migrations\201702200928278_Init.Designer.cs">
+      <DependentUpon>201702200928278_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702211028247_InitialCreate.cs" />
+    <Compile Include="Migrations\201702211028247_InitialCreate.Designer.cs">
+      <DependentUpon>201702211028247_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702220907518_update22.cs" />
+    <Compile Include="Migrations\201702220907518_update22.Designer.cs">
+      <DependentUpon>201702220907518_update22.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -224,6 +246,7 @@
     <Compile Include="Models\TacGia.cs" />
     <Compile Include="Models\TaiLieu.cs" />
     <Compile Include="Models\ThanhVien.cs" />
+    <Compile Include="Models\ThanhVienChuyenDe.cs" />
     <Compile Include="Models\TuKhoa.cs" />
     <Compile Include="Models\TuKhoaTaiLieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -261,7 +284,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -292,12 +317,33 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\DocumentManager\Index.cshtml" />
     <Content Include="Views\DocumentManager\Submit.cshtml" />
     <Content Include="Views\XemChiTiet\Index.cshtml" />
     <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\vidu\Index.cshtml" />
+    <Content Include="Views\DangNhap\Index.cshtml" />
+    <Content Include="Views\ChuyenDe\Index.cshtml" />
+    <Content Include="Views\ChuyenDe\Create.cshtml" />
+    <Content Include="Views\NgonNgu\Index.cshtml" />
+    <Content Include="Views\NgonNgu\Create.cshtml" />
+    <Content Include="Views\TacGia\Index.cshtml" />
+    <Content Include="Views\TacGia\Create.cshtml" />
+    <Content Include="Views\TuKhoa\Index.cshtml" />
+    <Content Include="Views\TuKhoa\Create.cshtml" />
+    <Content Include="Views\Rating\Index.cshtml" />
+    <Content Include="Views\Rating\Create.cshtml" />
+    <Content Include="Views\ThanhVien\Index.cshtml" />
+    <Content Include="Views\ThanhVien\Create.cshtml" />
+    <Content Include="Views\DiemTichLuy\Index.cshtml" />
+    <Content Include="Views\DiemTichLuy\Create.cshtml" />
+    <Content Include="Views\BinhLuan\Index.cshtml" />
+    <Content Include="Views\BinhLuan\Create.cshtml" />
+    <Content Include="Views\DangNhap\CreateLogin.cshtml" />
+    <Content Include="Views\Shared\_LayoutSingle.cshtml" />
+    <Content Include="Views\TimKiem\Index.cshtml" />
+    <Content Include="Views\Shared\_MenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,8 +357,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702141006137_DBGenerate.resx">
-      <DependentUpon>201702141006137_DBGenerate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702200928278_Init.resx">
+      <DependentUpon>201702200928278_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702211028247_InitialCreate.resx">
+      <DependentUpon>201702211028247_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702220907518_update22.resx">
+      <DependentUpon>201702220907518_update22.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

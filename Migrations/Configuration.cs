@@ -10,7 +10,6 @@ namespace DocShare.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "DocShare.Models.ApplicationDbContext";
         }
 
         protected override void Seed(DocShare.Models.ApplicationDbContext context)

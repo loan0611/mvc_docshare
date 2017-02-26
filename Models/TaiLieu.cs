@@ -10,13 +10,19 @@ namespace DocShare.Models
     [TableName("TaiLieus")]
     public class TaiLieu
     {
-        [Key]
+       [Key]
         public int MaTaiLieu { get; set; }
+       
         public int MaChuyenDe { get; set; }
+       
         public int MaTuKhoa { get; set; }
+       
         public int MaNgonNgu { get; set; }
+       
         public int MaThanhVienUpload { get; set; }
+       
         public int MaThanhVienDuyet { get; set; }
+       
         public int MaRating { get; set; }
         public string NhanDe { get; set; }
         public int SoTrang { get; set; }
@@ -27,6 +33,7 @@ namespace DocShare.Models
         public int SoLanDownload { get; set; }
         public string GhiChu { get; set; }
         public decimal Phi { get; set; }
+        public string Anh { get; set; }
         public string TinhTrang { get; set; }
 
         //public virtual ChuyenDe ChuyenDe { get; set; }

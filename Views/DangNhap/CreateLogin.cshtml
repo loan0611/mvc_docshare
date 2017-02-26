@@ -1,0 +1,37 @@
+﻿@model DocShare.Models.ThanhVien
+@{
+    ViewBag.Title = "CreateLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Create", "DangNhap", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            Tai Khoan
+        </div>
+        <div class="col-xs-12 col-sm-10">
+            @Html.TextAreaFor(m => m.TenTruyCap, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            Mat Khau
+        </div>
+        <div class="col-xs-12 col-sm-10">
+            @Html.TextAreaFor(m => m.MatKhau, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+            <input type="submit" class="btn btn-default" value="Cancel" />
+        </div>
+    </div>
+</div>
+}
+

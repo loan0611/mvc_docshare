@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="form-group" >
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <img src="~/Content/Images/cooltext230047489617997.png" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-12">
+                
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <img src="~/Content/Images/cooltext230047489617997.png" />
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

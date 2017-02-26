@@ -1,0 +1,67 @@
+﻿@model DocShare.Models.ThanhVien
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thanh Vien</h2>
+
+@using (Html.BeginForm("Create", "ThanhVien", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tên Truy Cap
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.TenTruyCap, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Mat Khau
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.MatKhau, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Ho Ten
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.HoTen, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Gioi Tinh
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.GioiTinh, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Email
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Quyen Han
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.QuyenHan, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
+

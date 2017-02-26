@@ -1,7 +1,9 @@
-﻿
+﻿@using PagedList.Mvc;
+@using DocShare.Models;
+@model PagedList.PagedList<TaiLieu>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div>
     <div class="modal-header">
@@ -14,33 +16,35 @@
         <label>All: </label><br />
      </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-xs-12 col-sm-4">
                 <img src="~/Content/Images/TL1.png" />
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-8">
                 <p>Thật ra Lập Trình Hướng Đối Tượng trở nên đáng sợ đối với rất nhiều lập trìnhviên bởi nó mang đến các cú pháp khá mới mẻ và cầu kỳ ,do vậy nó nhanh chóng trở nên phức tạp hơnrất nhiều so với lập trình hướng thủ tục. </p>
                 @Html.ActionLink("Xem chi tiết...", "", "")
             </div>
         </div>
         
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-xs-12 col-sm-4">
                 <img src="~/Content/Images/TL2.png" />
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-8">
                 <p>ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.</p>
                 @Html.ActionLink("Xem chi tiết...", "", "")
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-xs-12 col-sm-4">
                 <img src="~/Content/Images/TL3.png" />
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-8">
                 <p>ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.</p>
                 @Html.ActionLink("Xem chi tiết...", "", "")
             </div>
         </div>
 </div>
 
+@*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ Model.PageCount)*@ 
 
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

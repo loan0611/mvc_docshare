@@ -1,0 +1,35 @@
+﻿@model DocShare.Models.ChuyenDe
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chuyên Đề</h2>
+
+@using (Html.BeginForm("Create", "ChuyenDe", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    @*<div class="row">
+        <label class="col-md-2 control-label">
+            Mã Chuyên Đề
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.MaChuyenDe, new { @class = "form-control" })
+        </div>
+    </div>*@
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tên Chuyên Đề
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.TenChuyenDe, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
+
