@@ -1,0 +1,72 @@
+﻿@model DocShare.Models.TaiLieu
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>@Model.NhanDe</h2>*@
+<div class="row">
+    <div class="col-xs-12 col-sm-2">
+        <p>@Html.ActionLink("Trang Chủ", "Index", "Home") </p>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+        <p>@Html.ActionLink("Kỹ Thuật", "", "") </p>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <p>@Html.ActionLink("Công Nghệ Thông Tin", "", "") </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-2">
+        <img src="~/Content/Images/ND_TL.png" height="100" width="100" />
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <p style="margin-top:40px">@Model.NhanDe</p>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <p>Loại File</p>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <p>Số Lần Download:@Model.SoLanDownload</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-2">
+        <p style="color:orangered">Chia Sẻ</p>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+        <p style="color:orangered">@Model.NgayUpload</p>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+        <p style="color:orangered">Loại File</p>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+        <p style="color:orangered">Số Trang:@Model.SoTrang</p>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+        <p style="color:orangered">Đánh Giá</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <img src="~/Content/Images/ND_TL.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6" style="margin-top:5px">
+        <p style="color:orangered">Tải về xem đầy đủ!</p>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <button type="button" class="btn btn-default">DownLoad</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <input type="text" style="height:60px; width:350px" />
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <button type="button" class="btn btn-default" style="margin-top:10px; margin-left:15px; height:30px;width:100px">Bình Luận</button>
+    </div>
+</div>
+

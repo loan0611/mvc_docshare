@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Mvc;
 using PagedList;
 namespace DocShare.Controllers
 {
@@ -20,7 +19,7 @@ namespace DocShare.Controllers
             try
             {
                 //var tailieus = new List<TaiLieu>();
-                int pagesize = 10;
+                int pagesize = 2;
                 int pagenumber = (page ?? 1);
                 //tailieus.ToPagedList(page, pagesize);
                 //if (maChuyenDe != null)

@@ -1,12 +1,11 @@
-﻿@model DocShare.Models.TaiLieu
+﻿@model DocShare.Models.PostTaiLieuModel
 @{
     ViewBag.Title = "Submit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Submit</h2>
 
-@using (Html.BeginForm("Submit", "DocumentManager", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Submit", "TaiLieu", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <hr />
@@ -15,7 +14,7 @@
             Nhan Đề
         </label>
         <div class="col-md-10">
-            @Html.TextAreaFor(m => m.NhanDe, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.NhanDe, new { @class = "form-control" })
         </div>
     </div>
     <div class="row">
@@ -23,41 +22,9 @@
             Số Trang
         </label>
         <div class="col-md-10">
-            @Html.TextAreaFor(m => m.SoTrang, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.SoTrang, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">
-            Kich Thuoc
-        </label>
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.KichThuoc, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">
-            Luot Xem
-        </label>
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.LuotXem, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">
-            File
-        </label>
-        <div class="col-md-10">
-            <input type="file" id="FileUpload" name="file"  />
-        </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">
-            So Lan Download
-        </label>
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.SoLanDownload, new { @class = "form-control" })
-        </div>
-    </div>
+    </div> 
     <div class="row">
         <label class="col-md-2 control-label">
             Ghi Chu
@@ -71,20 +38,36 @@
             Phi
         </label>
         <div class="col-md-10">
-            @Html.TextAreaFor(m => m.Phi, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.Phi, new { @class = "form-control" })
         </div>
     </div>
     <div class="row">
         <label class="col-md-2 control-label">
-            Tinh Trang
+            Tu Khoa
         </label>
         <div class="col-md-10">
-            @Html.TextAreaFor(m => m.TinhTrang, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.TuKhoa, new { @class = "form-control" })
         </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">Chuyên Đề</label>
+        <div class="col-md-10">@Html.DropDownList("ChuyenDe", null, "---Select---", new { @class = "form-control" })</div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">Ngôn Ngữ </label>
+        <div class="col-md-10">@Html.DropDownList("NgonNgu", null, "---Select---" ,new { @class = "form-control" })</div>
     </div>
     <div class="row">
         <label class="col-md-2 control-label">
             Anh
+        </label>
+        <div class="col-md-10">
+            <input type="file" id="" name="image" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tai Lieu
         </label>
         <div class="col-md-10">
             <input type="file" id="" name="file" />

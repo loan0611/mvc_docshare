@@ -1,0 +1,43 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using DocShare.Models;
+@model PagedList.PagedList<TaiLieu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int pageSize = ViewBag.PageSize;
+    String searchString = ViewBag.SearchString;
+}
+
+<div class="container">
+    @*<div>
+        @ViewBag.ThongBao
+    </div>*@
+    <div class="modal-header">
+        <select id="sort" name="Sort" style="float:right">
+            <option value="">--Choose--</option>
+            <option value="0">Ngày upload</option>
+            <option value="1">Lượt rating</option>
+            <option selected="selected" value="2">All</option>
+        </select>
+        <label>All: </label><br />
+    </div>
+   @foreach (var item in Model)
+   {
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <img src="~/Content/Images/TL1.png" />
+            @item.Anh
+        </div>
+            <div class="col-xs-12 col-sm-8">
+            @item.NhanDe
+            @Html.ActionLink("Xem chi tiết...", "Detail", new { controller="TaiLieu", id = item.MaTaiLieu})
+        </div>
+    </div>
+   }
+    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+</div>
+@*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / Model.PageCount)*@
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, pageSize = pageSize, searchString = searchString }))

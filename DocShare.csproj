@@ -204,7 +204,8 @@
     <Compile Include="Controllers\ChuyenDeController.cs" />
     <Compile Include="Controllers\DangNhapController.cs" />
     <Compile Include="Controllers\DiemTichLuyController.cs" />
-    <Compile Include="Controllers\DocumentManagerController.cs" />
+    <Compile Include="Controllers\DownloadController.cs" />
+    <Compile Include="Controllers\TaiLieuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NgonNguController.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Models\LichSuDownload.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NgonNgu.cs" />
+    <Compile Include="Models\PostTaiLieuModel.cs" />
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\Reply.cs" />
     <Compile Include="Models\TacGia.cs" />
@@ -318,8 +320,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\DocumentManager\Index.cshtml" />
-    <Content Include="Views\DocumentManager\Submit.cshtml" />
+    <Content Include="Views\TaiLieu\Index.cshtml" />
+    <Content Include="Views\TaiLieu\Submit.cshtml" />
     <Content Include="Views\XemChiTiet\Index.cshtml" />
     <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\vidu\Index.cshtml" />
@@ -344,9 +346,12 @@
     <Content Include="Views\Shared\_LayoutSingle.cshtml" />
     <Content Include="Views\TimKiem\Index.cshtml" />
     <Content Include="Views\Shared\_MenuPartial.cshtml" />
+    <Content Include="Views\TaiLieu\Detail.cshtml" />
+    <Content Include="Views\Upload\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Download\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

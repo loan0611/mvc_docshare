@@ -1,0 +1,69 @@
+﻿@model DocShare.Models.TaiLieu
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tên tài liệu
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.NhanDe, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">Chuyên Đề</label>
+        <div class="col-md-10">@Html.DropDownList("ChuyenDe")</div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Tác giả
+        </label>
+        <div class="col-md-10">
+            <input class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Từ khóa
+        </label>
+        <div class="col-md-10">
+            <input class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Ngôn ngữ
+        </label>
+        <div class="col-md-10">
+            <input class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            File upload
+        </label>
+        <div class="col-md-10">
+            <input type="file" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Ảnh
+        </label>
+        <div class="col-md-10">
+            <input type="file" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Upload</button>
+            <button type="submit" class="btn btn-default" style="margin-left:100px">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
