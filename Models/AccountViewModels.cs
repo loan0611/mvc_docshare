@@ -21,6 +21,8 @@ namespace DocShare.Models
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
         public string ReturnUrl { get; set; }
         public bool RememberMe { get; set; }
+        public string FullName { get; set; }
+        public string Gender { get; set; }
     }
 
     public class VerifyCodeViewModel

@@ -1,4 +1,4 @@
-﻿@model DocShare.Models.PostTaiLieuModel
+﻿@model DocShare.Models.TaiLieuViewModel
 @{
     ViewBag.Title = "Submit";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -27,14 +27,6 @@
     </div> 
     <div class="row">
         <label class="col-md-2 control-label">
-            Ghi Chu
-        </label>
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.GhiChu, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">
             Phi
         </label>
         <div class="col-md-10">
@@ -51,11 +43,11 @@
     </div>
     <div class="row">
         <label class="col-md-2 control-label">Chuyên Đề</label>
-        <div class="col-md-10">@Html.DropDownList("ChuyenDe", null, "---Select---", new { @class = "form-control" })</div>
+        <div class="col-md-10">@Html.DropDownList("MaChuyenDe", null, "---Select---", new { @class = "form-control" })</div>
     </div>
     <div class="row">
         <label class="col-md-2 control-label">Ngôn Ngữ </label>
-        <div class="col-md-10">@Html.DropDownList("NgonNgu", null, "---Select---" ,new { @class = "form-control" })</div>
+        <div class="col-md-10">@Html.DropDownList("MaNgonNgu", null, "---Select---" ,new { @class = "form-control" })</div>
     </div>
     <div class="row">
         <label class="col-md-2 control-label">
@@ -71,6 +63,14 @@
         </label>
         <div class="col-md-10">
             <input type="file" id="" name="file" />
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 control-label">
+            Ghi Chu
+        </label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.GhiChu, new { @class = "form-control" })
         </div>
     </div>
     <div class="row">

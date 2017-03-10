@@ -7,13 +7,13 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     int pageSize = ViewBag.PageSize;
-    String searchString = ViewBag.SearchString;
+    string searchString = ViewBag.SearchString;
 }
 
 <div class="container">
     @*<div>
         @ViewBag.ThongBao
-    </div>*@
+    </div>*@                        
     <div class="modal-header">
         <select id="sort" name="Sort" style="float:right">
             <option value="">--Choose--</option>
@@ -27,12 +27,14 @@
    {
     <div class="row">
         <div class="col-xs-12 col-sm-4">
-            <img src="~/Content/Images/TL1.png" />
-            @item.Anh
+            <img src="@item.Anh" height="300" width="200" style="margin:5px" />          
         </div>
             <div class="col-xs-12 col-sm-8">
             @item.NhanDe
-            @Html.ActionLink("Xem chi tiết...", "Detail", new { controller="TaiLieu", id = item.MaTaiLieu})
+            @Html.ActionLink("Xem chi tiết...", "Detail", new { controller="TaiLieu", id = item.MaTaiLieu})<br/>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { controller="TaiLieu", id = item.MaTaiLieu})
+            </p>
         </div>
     </div>
    }

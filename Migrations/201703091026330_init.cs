@@ -3,7 +3,7 @@ namespace DocShare.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Init : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -142,6 +142,7 @@ namespace DocShare.Migrations
                         SoLanDownload = c.Int(nullable: false),
                         GhiChu = c.String(),
                         Phi = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Anh = c.String(),
                         TinhTrang = c.String(),
                     })
                 .PrimaryKey(t => t.MaTaiLieu);
@@ -184,6 +185,8 @@ namespace DocShare.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        FullName = c.String(),
+                        Gender = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),

@@ -220,17 +220,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702200928278_Init.cs" />
-    <Compile Include="Migrations\201702200928278_Init.Designer.cs">
-      <DependentUpon>201702200928278_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702211028247_InitialCreate.cs" />
-    <Compile Include="Migrations\201702211028247_InitialCreate.Designer.cs">
-      <DependentUpon>201702211028247_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702220907518_update22.cs" />
-    <Compile Include="Migrations\201702220907518_update22.Designer.cs">
-      <DependentUpon>201702220907518_update22.cs</DependentUpon>
+    <Compile Include="Migrations\201703091026330_init.cs" />
+    <Compile Include="Migrations\201703091026330_init.Designer.cs">
+      <DependentUpon>201703091026330_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -242,7 +234,7 @@
     <Compile Include="Models\LichSuDownload.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NgonNgu.cs" />
-    <Compile Include="Models\PostTaiLieuModel.cs" />
+    <Compile Include="Models\TaiLieuViewModel.cs" />
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\Reply.cs" />
     <Compile Include="Models\TacGia.cs" />
@@ -342,16 +334,17 @@
     <Content Include="Views\DiemTichLuy\Create.cshtml" />
     <Content Include="Views\BinhLuan\Index.cshtml" />
     <Content Include="Views\BinhLuan\Create.cshtml" />
-    <Content Include="Views\DangNhap\CreateLogin.cshtml" />
     <Content Include="Views\Shared\_LayoutSingle.cshtml" />
     <Content Include="Views\TimKiem\Index.cshtml" />
     <Content Include="Views\Shared\_MenuPartial.cshtml" />
     <Content Include="Views\TaiLieu\Detail.cshtml" />
     <Content Include="Views\Upload\Create.cshtml" />
+    <Content Include="Views\Download\Index.cshtml" />
+    <Content Include="Views\TaiLieu\Edit.cshtml" />
+    <Content Include="Views\DangNhap\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Download\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -362,14 +355,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702200928278_Init.resx">
-      <DependentUpon>201702200928278_Init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702211028247_InitialCreate.resx">
-      <DependentUpon>201702211028247_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702220907518_update22.resx">
-      <DependentUpon>201702220907518_update22.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703091026330_init.resx">
+      <DependentUpon>201703091026330_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

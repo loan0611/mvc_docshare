@@ -22,6 +22,10 @@ namespace DocShare.Controllers
             return View(thanhviens);
         }
 
+        public ActionResult Edit()
+        {
+            return View();
+        }
         public ActionResult Create()
         {
             return View();
