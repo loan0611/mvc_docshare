@@ -39,17 +39,17 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                    <div class="col-md-offset-2 col-md-1">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </div>
+                    <div class="col-md-9">
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
                     </div>
                 </div>
                 <p>
                     @Html.ActionLink("Register as a new user", "Register")
                 </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
+                //Enable this once you have account confirmation enabled for password reset functionality
             }
         </section>
     </div>

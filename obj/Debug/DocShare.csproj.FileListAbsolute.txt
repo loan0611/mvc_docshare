@@ -79,6 +79,8 @@ D:\WebChiaSeTL\WWW\DocShare\bin\Microsoft.Owin.Security.Twitter.xml
 D:\WebChiaSeTL\WWW\DocShare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.dll
 D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.pdb
-D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.Migrations.DBGenerate.resources
+D:\WebChiaSeTL\WWW\DocShare\bin\PagedList.dll
+D:\WebChiaSeTL\WWW\DocShare\bin\PagedList.xml
+D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.Migrations.docshare_1103.resources
 D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.csproj.GenerateResource.Cache
 D:\WebChiaSeTL\WWW\DocShare\obj\Debug\DocShare.csprojResolveAssemblyReference.cache

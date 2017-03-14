@@ -5,11 +5,12 @@
 
 <div class="head-link">
     <div class="row">
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12 col-sm-7">
         </div>
-        @using (Html.BeginForm("Index", "TaiLieu",FormMethod.Get))
-        { 
-        <div class="col-xs-12 col-sm-4">
+        
+        <div class="col-xs-12 col-sm-5">
+            @using (Html.BeginForm("Index", "TaiLieu", FormMethod.Get))
+            {
             @Html.TextBox("searchString","", htmlAttributes: new {@class = "txtseach", @placeholder ="Seach" } )
             @*<input type="text" placeholder="Search..." />*@
                 <button type="submit"><img src="~/Content/Images/1486481340_xmag.png" height="20" width="20" /></button>
@@ -17,11 +18,34 @@
             <button type="submit" class="btn btn-info">
                 @Html.ActionLink("Upload", "Submit", "TaiLieu")
              </button>
-            @Html.ActionLink("Đăng nhập", "Login", "Account")
-            @Html.ActionLink("Đăng ký", "Register", "Account")
+            }
+            @*@Html.ActionLink("Đăng Nhập", "Login", "Account")
+            @Html.ActionLink("Đăng ký", "Register", "Account")*@
+            @if (Request.IsAuthenticated)
+            {
+                using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-brand" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        </li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()">Logoff</a></li>
+                    </ul>
+                }
+            }
+            else
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                </ul>
+            }
+
             <br />
             <a href="#">Tìm kiếm nâng cao?</a><br />
 </div>
-        }
+       
     </div>
 </div>

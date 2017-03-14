@@ -81,6 +81,12 @@ namespace DocShare.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name ="Full Name")]
+        public string FullName { get; set; }
+        [Required]
+        [Display(Name ="Gender")]
+        public string Gender { get; set; }
     }
 
     public class ResetPasswordViewModel

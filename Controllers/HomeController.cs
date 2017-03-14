@@ -18,18 +18,9 @@ namespace DocShare.Controllers
         {
             try
             {
-                //var tailieus = new List<TaiLieu>();
                 int pagesize = 2;
                 int pagenumber = (page ?? 1);
-                //tailieus.ToPagedList(page, pagesize);
-                //if (maChuyenDe != null)
-                //{
-                //    tailieus = DBContext.TaiLieus.Where(x => x.MaChuyenDe == maChuyenDe).ToList();
-                //}
-                //else
-                //{
-                //    tailieus = DBContext.TaiLieus.ToList();
-                //}
+              
                 return View(DBContext.TaiLieus.OrderBy(x => x.Anh).ToPagedList(pagenumber, pagesize));
             }
             catch (Exception ex)
@@ -40,8 +31,6 @@ namespace DocShare.Controllers
         
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

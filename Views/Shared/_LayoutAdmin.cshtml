@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <img src="~/Content/Images/cooltext230047489617997.png" />
+            </div>
+        </div>
+    </div>
+    @{Html.RenderPartial("~/Views/Shared/_MenuPartial.cshtml"); }
+    <div class="col-xs-12 col-sm-2">
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">My Document</a></li>
+                <li class="list-group-item"><a href="#">All Document</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-10">
+        @RenderBody()
+            
+    </div>
+    <div class="modal-footer">
+        <img src="~/Content/Images/cooltext230047489617997.png" />
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

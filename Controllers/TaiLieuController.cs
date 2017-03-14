@@ -247,5 +247,10 @@ namespace DocShare.Controllers
             return View();
         }
 
+        public ActionResult PageUpload()
+        {
+            return View();
+        }
+
     }
 }
