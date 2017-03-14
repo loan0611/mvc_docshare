@@ -1,0 +1,25 @@
+﻿@model List<DocShare.Models.ChuyenDe>
+@{
+    ViewBag.Title = "MenuLeft";
+}
+
+<div class="example">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li><a href="">Trang chủ</a></li>
+                </ul>
+            @foreach (var item in Model)
+            {
+                <ul class="nav nav-tabs">
+                    <li><a href="">@item.TenChuyenDe</a></li>
+                </ul>
+            }
+            </div>
+        </div>
+    </div>
+</div>      
+
+
+

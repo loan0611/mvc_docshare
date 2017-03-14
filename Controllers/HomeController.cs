@@ -29,16 +29,14 @@ namespace DocShare.Controllers
             }
         }
         
-        public ActionResult About()
+        public ActionResult Manager()
         {
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult MenuLeft()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var chuyende = DBContext.ChuyenDes.ToList();
+            return PartialView(chuyende);
         }
     }
 }

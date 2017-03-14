@@ -3,11 +3,11 @@
 }
 .head-link{
      clear: both;
-     height: 90px;
+     height: 80px;
      line-height: 20px;
      padding-left: 10px;
      padding-right: 10px;
      margin-bottom:5px;
      border-radius:5px;
-     background:linear-gradient(#b9f7f0,#0d91bb);
+     background:#0094ff;
 }
