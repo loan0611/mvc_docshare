@@ -1,11 +1,11 @@
-﻿@*@model DocShare.Models.TaiLieuViewModel
+﻿@model DocShare.Models.TaiLieuViewModel
 @{
     ViewBag.Title = "Submit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Submit</h2>
 
-@using (Html.BeginForm("Submit", "TaiLieu", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Submit", "Manager", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <hr />
@@ -24,7 +24,7 @@
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.SoTrang, new { @class = "form-control" })
         </div>
-    </div> 
+    </div>
     <div class="row">
         <label class="col-md-2 control-label">
             Phi
@@ -55,7 +55,7 @@
     </div>
     <div class="row">
         <label class="col-md-2 control-label">Ngôn Ngữ </label>
-        <div class="col-md-10">@Html.DropDownList("MaNgonNgu", null, "---Select---" ,new { @class = "form-control" })</div>
+        <div class="col-md-10">@Html.DropDownList("MaNgonNgu", null, "---Select---", new { @class = "form-control" })</div>
     </div>
     <div class="row">
         <label class="col-md-2 control-label">
@@ -86,4 +86,4 @@
             <input type="submit" class="btn btn-default" value="Submit" />
         </div>
     </div>
-}*@
+}

@@ -1,4 +1,4 @@
-﻿@*@model DocShare.Models.TaiLieuViewModel
+﻿@model DocShare.Models.TaiLieuViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -6,10 +6,10 @@
 }
 
 <h2>Edit</h2>
-@using (Html.BeginForm("Edit", "TaiLieu", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Edit", "Manager", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <div class="form-horizontal">        
+    <div class="form-horizontal">
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.MaTaiLieu)
         <div class="form-group">
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.MaChuyenDe, new { @class = "control-label col-md-2" })
-            <div class="col-md-10" >
+            <div class="col-md-10">
                 @Html.DropDownList("MaChuyenDe", null, "---Select---", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaChuyenDe)
             </div>
@@ -35,15 +35,16 @@
         </div>
         @if (User.IsInRole("Admin"))
         {
-            <select class="form-control">
-                <option value="true">Phe duyet</option>
-                <option value="false">Khong phe duyet</option>
+            @Html.LabelFor(model => model.PheDuyet, new { @class = "control-label col-md-2" })
+            <select class="form-control" name="pheduyet">
+                <option value="true">Phê Duyêt</option>
+                <option value="false">Không Phê Duyệt</option>
             </select>
         }
         <div class="form-group">
             @Html.LabelFor(model => model.NhanDe, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NhanDe )
+                @Html.EditorFor(model => model.NhanDe)
                 @Html.ValidationMessageFor(model => model.NhanDe)
             </div>
         </div>
@@ -54,8 +55,9 @@
                 @Html.ValidationMessageFor(model => model.SoTrang)
             </div>
         </div>
+
         <div class="form-group">
-               @Html.LabelFor(model => model.Phi, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Phi, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Phi)
                 @Html.ValidationMessageFor(model => model.Phi)
@@ -66,13 +68,13 @@
             <div class="col-md-10">
                 @Html.HiddenFor(model => model.Anh)
                 <img src="@Model.Anh" height="300" width="300" />
-                <input type="file" id="" name="image"  />
+                <input type="file" id="" name="image" />
                 @Html.ValidationMessageFor(model => model.Anh)
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.LinkFile, new { @class = "control-label col-md-2" })
-            <div class="col-md-10" >
+            <div class="col-md-10">
                 @Html.HiddenFor(model => model.LinkFile)
                 <a href="">@Model.LinkFile</a>
                 <input type="file" id="" name="file" />
@@ -96,5 +98,5 @@
 }
 <div>
     @Html.ActionLink("Back To List", "Index")
-</div>*@
+</div>
 

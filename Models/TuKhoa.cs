@@ -12,6 +12,6 @@ namespace DocShare.Models
         public int MaTuKhoa { get; set; }
         public string TenTuKhoa { get; set; }
 
-        //public virtual ICollection<TuKhoaTaiLieu> TuKhoaTaiLieus { get; set; }
+        public virtual ICollection<TuKhoaTaiLieu> TuKhoaTaiLieus { get; set; }
     }
 }

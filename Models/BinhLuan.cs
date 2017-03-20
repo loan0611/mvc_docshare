@@ -15,9 +15,9 @@ namespace DocShare.Models
         public int MaTaiLieu { get; set; }
         public string NDBinhLuan { get; set; }
         public DateTime NgayBL { get; set; }
-        //public virtual ICollection<Reply> Replies { get; set; }
-        //public virtual ThanhVien ThanhVien { get; set; }
-        //public virtual TaiLieu TaiLieu { get; set; }
+        public virtual ICollection<Reply> Replies { get; set; }
+        public virtual ThanhVien ThanhVien { get; set; }
+        public virtual TaiLieu TaiLieu { get; set; }
 
     }
 }

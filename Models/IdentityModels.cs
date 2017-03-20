@@ -45,5 +45,17 @@ namespace DocShare.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("SystemUsers");
+            modelBuilder.Entity<IdentityRole>().ToTable("SystemRoles");
+            modelBuilder.Entity<IdentityUserRole>().ToTable("SystemUserRoles");
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("SystemUserLogins");
+            modelBuilder.Entity<IdentityUserClaim>().ToTable("SystemUserClaims");
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

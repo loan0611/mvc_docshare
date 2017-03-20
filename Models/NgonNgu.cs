@@ -12,7 +12,7 @@ namespace DocShare.Models
         public int MaNgonNgu { get; set; }
         public string TenNgonNgu { get; set; }
 
-        //public virtual ICollection<TaiLieu> TaiLieus { get; set; }
+        public virtual ICollection<TaiLieu> TaiLieus { get; set; }
 
     }
 }

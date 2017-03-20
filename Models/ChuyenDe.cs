@@ -14,6 +14,7 @@ namespace DocShare.Models
         public int MaChuyenDe { get; set; }
         public string TenChuyenDe { get; set; }
 
-        //public virtual ICollection<TaiLieu> TaiLieus { get; set; }
+        public virtual ICollection<TaiLieu> TaiLieus { get; set; }
+        public virtual ICollection<ThanhVienChuyenDe> ThanhVienChuyenDes { get; set; }
     }
 }

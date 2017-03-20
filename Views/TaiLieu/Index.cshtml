@@ -11,6 +11,10 @@
 }
 
 <div class="container">
+    <div id="tin">Tin Pro</div>
+    <div id="loan">Loa Dien</div>
+    <button id="toggle" onclick="toggleElement()">Toggle</button>
+
     @*<div>
         @ViewBag.ThongBao
     </div>*@                        
@@ -30,8 +34,7 @@
             <img src="@item.Anh" height="300" width="200" style="margin:5px" />          
         </div>
             <div class="col-xs-12 col-sm-8">
-            @item.NhanDe
-            <
+            @item.NhanDe           
             @Html.ActionLink("Xem chi tiết...", "Detail", new { controller="TaiLieu", id = item.MaTaiLieu})<br/>
             <p>
                 @Html.ActionLink("Edit", "Edit", new { controller="TaiLieu", id = item.MaTaiLieu})
@@ -44,3 +47,22 @@
 @*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / Model.PageCount)*@
 
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, pageSize = pageSize, searchString = searchString }))
+
+<script>
+    var element_showing = 'tin';
+    $(document).ready(function () {        
+        $('#loan').hide();
+    })
+
+    function toggleElement() {
+        if (element_showing == 'tin') {
+            $('#loan').show();
+            $('#tin').hide();
+            element_showing = 'loan';
+        } else {
+            $('#tin').show();
+            $('#loan').hide();
+            element_showing = 'tin';
+        }
+    }
+</script>

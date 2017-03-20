@@ -1,0 +1,36 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using DocShare.Models;
+@model PagedList.PagedList<TaiLieu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int pageSize = ViewBag.PageSize;
+}
+
+<h2>Manager</h2>
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Option</th>
+        </tr>
+        @foreach(var item in Model)
+        { 
+        <tr>
+            <td>@item.MaTaiLieu</td>
+            <td>@item.NhanDe</td>
+            <td>@item.PheDuyet</td>
+            <td>
+                <button class="btn-info">@Html.ActionLink("Edit", "Edit", new { controller = "Manager", id = item.MaTaiLieu })</button>
+                <button class="btn-info">@Html.ActionLink("Delete","Delete", new { controller = "Manager", id = item.MaTaiLieu })</button>
+            </td>
+        </tr>
+        }
+    </table>
+</div> 
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, pageSize = pageSize}))
+

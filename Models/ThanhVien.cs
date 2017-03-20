@@ -18,14 +18,14 @@ namespace DocShare.Models
         public DateTime NgayDangKy { get; set; }
         public string QuyenHan { get; set; }
 
-        //public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
+        public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
 
-        //public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
+        public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
 
-        //public virtual ICollection<BinhLuan> BinhLuans { get; set; }
+        public virtual ICollection<BinhLuan> BinhLuans { get; set; }
 
-        //public virtual ICollection<Reply> Replies { get; set; }
-
-        //public virtual ICollection<DiemTichLuy> DiemTichLuys { get; set; }
+        public virtual ICollection<Reply> Replies { get; set; }
+        public virtual ICollection<ThanhVienChuyenDe> ThanhVienChuyenDes { get; set; }
+        public virtual ICollection<DiemTichLuy> DiemTichLuys { get; set; }
     }
 }

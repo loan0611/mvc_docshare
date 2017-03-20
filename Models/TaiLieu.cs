@@ -18,12 +18,14 @@ namespace DocShare.Models
         public int MaTuKhoa { get; set; }
        
         public int MaNgonNgu { get; set; }
-       
+
+        public int MaTacGia { get; set; }
+
         public int MaThanhVienUpload { get; set; }
        
         public int MaThanhVienDuyet { get; set; }
        
-        public int MaRating { get; set; }
+        public int? MaRating { get; set; }
         public string NhanDe { get; set; }
         public int SoTrang { get; set; }
         public DateTime NgayUpload { get; set; }
@@ -34,19 +36,19 @@ namespace DocShare.Models
         public string GhiChu { get; set; }
         public decimal Phi { get; set; }
         public string Anh { get; set; }
-        public string TinhTrang { get; set; }
+        public bool PheDuyet { get; set; }
 
-        //public virtual ChuyenDe ChuyenDe { get; set; }
-        //public virtual NgonNgu NgonNgu { get; set; }
-        //public virtual TacGia TacGia { get; set; }
-        //public virtual Rating Rating { get; set; }
+        public virtual ChuyenDe ChuyenDe { get; set; }
+        public virtual NgonNgu NgonNgu { get; set; }
+        public virtual TacGia TacGia { get; set; }
+        public virtual Rating Rating { get; set; }
 
 
-        //public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
+        public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
 
-        //public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
+        public virtual ICollection<DanhSachTaiLieuYeuTich> DanhSachTaiLieuYeuThichs { get; set; }
 
-        //public virtual ICollection<BinhLuan> BinhLuans { get; set; }
+        public virtual ICollection<BinhLuan> BinhLuans { get; set; }
 
     }
 }

@@ -392,7 +392,7 @@ namespace DocShare.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "TaiLieu");
+            return RedirectToAction("Index", "Home");
         }
 
         //
@@ -449,7 +449,7 @@ namespace DocShare.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "TaiLieu");
+            return RedirectToAction("Index", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

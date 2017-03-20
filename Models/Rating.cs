@@ -17,6 +17,6 @@ namespace DocShare.Models
         public int SL5Sao { get; set; }
         public int TBSao { get; set; }
 
-        //public virtual ICollection<TaiLieu> TaiLieus { get; set; }
+        public virtual ICollection<TaiLieu> TaiLieus { get; set; }
     }
 }
