@@ -21,7 +21,7 @@ namespace DocShare.Controllers
 
         //[HttpPost]
         public ActionResult Index(int? page, int? pageSize, string searchString)
-        {
+        {   
             int limit = 4;
             if (pageSize != null)
             {
@@ -39,6 +39,10 @@ namespace DocShare.Controllers
 
             return View(query.OrderBy(n => n.NgayUpload).ToPagedList(pagenumber, limit));
 
+        }
+        public ActionResult SeachAdvanced()
+        {
+            return View();
         }
         // GET: Manager
         public ActionResult Submit()

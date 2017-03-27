@@ -7,13 +7,13 @@ namespace DocShare.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class docshare_2003 : IMigrationMetadata
+    public sealed partial class docshare2003 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(docshare_2003));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(docshare2003));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703200932589_docshare_2003"; }
+            get { return "201703201420544_docshare-2003"; }
         }
         
         string IMigrationMetadata.Source

@@ -29,8 +29,8 @@
             <div class="col-xs-12 col-sm-4">
                 <img src="@item.Anh" height="300" width="200" style="margin:5px" />
             </div>
-            <div class="col-xs-12 col-sm-8">
-                @item.NhanDe
+            <div class="col-xs-12 col-sm-8" style="top:20px">
+                <p style="top:20px">@item.NhanDe</p>
                 @Html.ActionLink("Xem chi tiết...", "Detail", new { controller = "TaiLieu", id = item.MaTaiLieu })<br />
             </div>
         </div>
