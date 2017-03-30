@@ -10,59 +10,166 @@
     string searchString = ViewBag.SearchString;
 }
 
-<div class="container">
-    <div id="tin">Tin Pro</div>
-    <div id="loan">Loa Dien</div>
-    <button id="toggle" onclick="toggleElement()">Toggle</button>
-
-    @*<div>
-        @ViewBag.ThongBao
-    </div>*@                        
-    <div class="modal-header">
-        <select id="sort" name="Sort" style="float:right">
-            <option value="">--Choose--</option>
-            <option value="0">Ngày upload</option>
-            <option value="1">Lượt rating</option>
-            <option selected="selected" value="2">All</option>
-        </select>
-        <label>All: </label><br />
-    </div>
-   @foreach (var item in Model)
-   {
     <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <img src="@item.Anh" height="300" width="200" style="margin:5px" />          
+        <div class="col-xs-12 col-md-6" style="top:10px;padding:10px">
+            <div style="position:relative">
+                <a href="#"> <img height="310" width="100%" src="~/Content/Images/IMG_29032017_133613_0.png" /></a>
+                <div class="labletl">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản, điều này thật dễ dàng. Nhưng nếu bạn ngắt dòng văn bản đó một cách ngẫu nhiên, nó sẽ khó khăn hơn</label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
         </div>
-            <div class="col-xs-12 col-sm-8">
-            @item.NhanDe           
-            @Html.ActionLink("Xem chi tiết...", "Detail", new { controller="TaiLieu", id = item.MaTaiLieu})<br/>
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { controller="TaiLieu", id = item.MaTaiLieu})
-            </p>
+        <div class="col-xs-12 col-md-3"  style="top:10px; padding:5px">
+            <div style="position:relative;padding:5px">
+                <a href="#"><img height="150" width="100%" src="~/Content/Images/IMG_29032017_133400_0.png" /></a>
+                <div class="ph">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản,điều này thật dễ dàng. </label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+            <div style="position:relative;padding:5px">
+                <a href="#"><img height="150" width="100%" src="~/Content/Images/IMG_29032017_133652_0.png" /></a>
+                <div class="ph">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản,điều này thật dễ dàng. </label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3"  style="top:10px;padding:5px">
+            <div style="position:relative;padding:5px">
+                <a href="#"><img height="150" width="100%" src="~/Content/Images/IMG_29032017_133702_0.png" /></a>
+                <div class="ph">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản,điều này thật dễ dàng. </label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+            <div style="position:relative;padding:5px">
+                <a href="#"> <img height="150" width="100%" src="~/Content/Images/IMG_29032017_133433_0.png" /></a>
+                <div class="ph">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản,điều này thật dễ dàng. </label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
         </div>
     </div>
-   }
-    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
-</div>
-@*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / Model.PageCount)*@
+    <div class="row">
+        <h3 class="font"><i class="fa fa-book" aria-hidden="true"></i> Tài Liệu Nổi Bật</h3>
+        <div class="col-xs-12 col-md-4">
+            <div style="position:relative">
+                <a href="#"><img height="310" width="100%" src="~/Content/Images/IMG_29032017_133601_0.png" /></a>
+                <div class="labletl">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản, điều này thật dễ dàng. Nhưng nếu bạn ngắt dòng văn bản đó một cách ngẫu nhiên, nó sẽ khó khăn hơn</label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/download (1).jpg" /></td>
+                        <td>
+                            <a href="#">Tiếng anh giao tiếp</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/Giao-trinh-ky-nang-giao-tiep.gif" /></td>
+                        <td>
+                            <a href="#">Giáo trình tiếng anh</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div style="position:relative">
+                <a href="#"> <img height="310" width="100%" src="~/Content/Images/IMG_29032017_133541_0.png" /></a>
+                <div class="labletl">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản, điều này thật dễ dàng. Nhưng nếu bạn ngắt dòng văn bản đó một cách ngẫu nhiên, nó sẽ khó khăn hơn</label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/images (13).jpg"/></td>
+                        <td>
+                            <a href="#">Hỏi đáp về ẩm thực Hà Nội</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/images (14).jpg" /></td>
+                        <td>
+                            <a href="#">Đà Nẵng xưa</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div style="position:relative">
+                <a href="#"> <img height="310" width="100%" src="~/Content/Images/images (12).jpg"/></a>
+                <div class="labletl">
+                    <a href="#"><label class="colorwhite">Với một dòng văn bản, điều này thật dễ dàng. Nhưng nếu bạn ngắt dòng văn bản đó một cách ngẫu nhiên, nó sẽ khó khăn hơn</label></a>
+                    <p class="colorwhite">Lượt xem: | Lượt down</p>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/GetArticleImage.jpg" /></td>
+                        <td>
+                            <a href="#">Những truyền thống văn hóa Việt Nam</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:20px"><img height="100" width="100" src="~/Content/Images/download.jpg" /></td>
+                        <td>
+                            <a href="#">Văn Hóa Việt Nam</a>
+                            <p class="colorgrey">Ngày Upload:</p>
+                            <p class="colorgrey">Lượt xem:</p>
+                            <p class="colorgrey">Lượt down</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+   </div>
+    <h3 class="font "><i class="fa fa-book" aria-hidden="true"></i>Tài Liệu Mới</h3>
+    <div class="row">
+        <div class="col-100%xs-12 col-md-3" style="text-align:center">
+            <img width="" src="~/Content/Images/images (16).jpg" />
+            <a href="#" class="fomat"><p>Thỉnh thoảng, những bóng cây xao động vì những chiếc xuồng con làm vỡ tan gương nước phẳng lì. Người đi xuống khuấy nhanh chiếc dầm để mau về đến nhà.</p></a>
+            <p style="text-align:center; color:#808080">Lượt xem: | Lượt down:</p>
+        </div>
+        <div class="col-xs-12 col-md-3" style="text-align:center">
+            <img src="~/Content/Images/images (15).jpg" />
+            <a href="#"><p>Thỉnh thoảng, những bóng cây xao động vì những chiếc xuồng con làm vỡ tan gương nước phẳng lì. Người đi xuống khuấy nhanh chiếc dầm để mau về đến nhà.</p></a>
+            <p style="text-align:center; color:#808080">Lượt xem: | Lượt down:</p>
+        </div>
+        <div class="col-xs-12 col-md-3" style="text-align:center">
+            <img src="~/Content/Images/tải xuống (1).jpg" />
+            <a href="#"><p>Thỉnh thoảng, những bóng cây xao động vì những chiếc xuồng con làm vỡ tan gương nước phẳng lì. Người đi xuống khuấy nhanh chiếc dầm để mau về đến nhà.</p></a>
+            <p style="text-align:center; color:#808080">Lượt xem: | Lượt down:</p>
+        </div>
+        <div class="col-xs-12 col-md-3" style="text-align:center">
+            <img src="~/Content/Images/tải xuống (2).jpg" />
+            <a href="#"><p>Thỉnh thoảng, những bóng cây xao động vì những chiếc xuồng con làm vỡ tan gương nước phẳng lì. Người đi xuống khuấy nhanh chiếc dầm để mau về đến nhà.</p></a>
+            <p style="text-align:center; color:#808080">Lượt xem: | Lượt down:</p>
+        </div>
+    </div>
 
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, pageSize = pageSize, searchString = searchString }))
-
-<script>
-    var element_showing = 'tin';
-    $(document).ready(function () {        
-        $('#loan').hide();
-    })
-
-    function toggleElement() {
-        if (element_showing == 'tin') {
-            $('#loan').show();
-            $('#tin').hide();
-            element_showing = 'loan';
-        } else {
-            $('#tin').show();
-            $('#loan').hide();
-            element_showing = 'tin';
-        }
-    }
-</script>

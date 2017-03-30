@@ -165,8 +165,8 @@ E:\WWW\DocShare\bin\Microsoft.Owin.Security.OAuth.xml
 E:\WWW\DocShare\bin\Microsoft.Owin.Security.Google.xml
 E:\WWW\DocShare\bin\Microsoft.Owin.Security.Twitter.xml
 E:\WWW\DocShare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\WWW\DocShare\obj\Debug\DocShare.csprojResolveAssemblyReference.cache
 E:\WWW\DocShare\obj\Debug\DocShare.dll
 E:\WWW\DocShare\obj\Debug\DocShare.pdb
 E:\WWW\DocShare\obj\Debug\DocShare.Migrations.docshare2003.resources
 E:\WWW\DocShare\obj\Debug\DocShare.csproj.GenerateResource.Cache
+E:\WWW\DocShare\obj\Debug\DocShare.csprojResolveAssemblyReference.cache

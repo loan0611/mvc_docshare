@@ -9,28 +9,27 @@
     <link href="~/Content/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="form-group">
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <img src="~/Content/Images/cooltext230047489617997.png" />
-            </div>
-        </div>
-    </div>
     @{Html.RenderPartial("~/Views/Shared/_MenuPartial.cshtml"); }
-    <div class="col-xs-12 col-sm-2">
-        <div class="panel-body">
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#">@Html.ActionLink("My Document","Index","TaiLieu")</a></li>
-                <li class="list-group-item"><a href="#">@Html.ActionLink("All Document", "Index", "Home")</a></li>
-            </ul>
-        </div>
+    <div class="example">
+            <div class="row">
+                <div class="col-xs-12 col-md-12" style="background:#B22222;margin:0 auto;width:960px;padding:0px;border:0px">
+                    <ul class="nav nav-tabs">
+                        <li><a class="colorwhite" href="#">Trang Chủ </a></li>
+                        <li>
+                            <a class="colorwhite" href="#">My Document</a>
+                        </li>
+                        <li>
+                            <a class="colorwhite" href="#">All Document</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+    <div class="col-xs-12 col-sm-12" style="width:960px; margin:0 auto">
+        @RenderBody()         
     </div>
-    <div class="col-xs-12 col-sm-10">
-        @RenderBody()
-            
-    </div>
-    <div class="modal-footer">
-        <img src="~/Content/Images/cooltext230047489617997.png" />
+    <div class="col-xs-12 col-md-12 " style="width:960px;margin:0 auto;background:steelblue;padding:20px">
+        &copy; 2017 | &nbsp; All Rights Reserved | &nbsp; www.docshrae.com | &nbsp; 24x7 support | &nbsp; Email us: info@yourdomain.com
     </div>
     <script src="~/Scripts/bootstrap.js"></script>
     @RenderSection("Scripts", false)

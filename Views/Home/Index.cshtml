@@ -14,14 +14,13 @@
     @*<div>
             @ViewBag.ThongBao
         </div>*@
-    <div class="modal-header">
-        <select id="sort" name="Sort" style="float:right">
+    <div class="">
+        <select id="sort" name="Sort" class="form-control sort">
             <option value="">--Choose--</option>
             <option value="0">Ngày upload</option>
             <option value="1">Lượt rating</option>
             <option selected="selected" value="2">All</option>
         </select>
-        <label>All: </label><br />
     </div>
     @foreach (var item in Model)
     {

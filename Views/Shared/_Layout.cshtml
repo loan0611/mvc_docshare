@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Open+Sans+Condensed:100,200,300|Roboto:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+   
 </head>
 <body>
     @{Html.RenderPartial("~/Views/Shared/_MenuPartial.cshtml"); }
-    <div class="container">
-        
-        <div class="row">
-            
-            <div class="col-sm-3">
-                @{Html.RenderAction("MenuLeft", "Home");}
-            </div>
-                
-            <div class="col-sm-9">
-                
-                @RenderBody()
-            </div>
-        </div>
+    @{Html.RenderAction("MenuLeft", "Home");}
+    <div class="container" style="margin: 0 auto; width: 960px; background:#ffffff ">
+           @RenderBody()
     </div>
-    <div class="col-md-12 " style="background:steelblue; padding:20px; color:#ffffff">
+    <div class="col-md-12 " style="background:#ffffff;background:steelblue; padding:20px; color:#ffffff;margin:0 auto; width:960px">
         &copy; 2017 | &nbsp; All Rights Reserved | &nbsp; www.docshrae.com | &nbsp; 24x7 support | &nbsp; Email us: info@yourdomain.com
     </div>
     <script src="~/Scripts/bootstrap.js"></script>

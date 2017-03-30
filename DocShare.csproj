@@ -249,18 +249,49 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\1486481340_xmag.png" />
+    <Content Include="Content\Images\17571820_658670074316436_450607740_o.png" />
+    <Content Include="Content\Images\17622867_658672507649526_198113921_o.png" />
+    <Content Include="Content\Images\206821.jpg" />
     <Content Include="Content\Images\banner-ebook.png" />
+    <Content Include="Content\Images\book-48.png" />
     <Content Include="Content\Images\book-creation-banner.jpg" />
     <Content Include="Content\Images\cooltext230047489617997.png" />
     <Content Include="Content\Images\down.png" />
+    <Content Include="Content\Images\download %281%29.jpg" />
+    <Content Include="Content\Images\download.jpg" />
+    <Content Include="Content\Images\GetArticleImage.jpg" />
+    <Content Include="Content\Images\Giao-trinh-ky-nang-giao-tiep.gif" />
+    <Content Include="Content\Images\hinh-nen-hinh-anh-dep-ve-sach-30.jpg" />
+    <Content Include="Content\Images\images %2812%29.jpg" />
+    <Content Include="Content\Images\images %2813%29.jpg" />
+    <Content Include="Content\Images\images %2814%29.jpg" />
+    <Content Include="Content\Images\images %2815%29.jpg" />
+    <Content Include="Content\Images\images %2816%29.jpg" />
+    <Content Include="Content\Images\images.jpg" />
+    <Content Include="Content\Images\IMG_29032017_133400_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133433_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133541_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133601_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133613_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133652_0.png" />
+    <Content Include="Content\Images\IMG_29032017_133702_0.png" />
+    <Content Include="Content\Images\medium_gld1390638020.jpg" />
+    <Content Include="Content\Images\medium_vor1387044975.jpg" />
     <Content Include="Content\Images\ND_TL.png" />
     <Content Include="Content\Images\search.png" />
+    <Content Include="Content\Images\sách.jpg" />
     <Content Include="Content\Images\TL1.png" />
     <Content Include="Content\Images\TL2.png" />
     <Content Include="Content\Images\TL3.png" />
+    <Content Include="Content\Images\tải xuống %281%29.jpg" />
+    <Content Include="Content\Images\tải xuống %282%29.jpg" />
     <Content Include="Content\Images\up.png" />
+    <Content Include="Content\Images\vector_539_13-48.png" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -270,6 +301,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -354,6 +390,7 @@
     <Content Include="Views\Manager\Delete.cshtml" />
     <Content Include="Views\Manager\SeachAdvanced.cshtml" />
     <Content Include="Views\Shared\_LayoutDemo.cshtml" />
+    <Content Include="Views\Shared\_LayoutMember.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

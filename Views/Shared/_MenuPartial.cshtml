@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 }
 
-    <nav class="navbar navbar-default" style="background:steelblue" role="navigation">
+    <nav class="navbar navbar-default" style="background:#FF8C00;margin-bottom:0px;border:0px;margin:0 auto;border-radius:0px;width:960px" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -37,17 +37,17 @@
                         <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
                 }
             </ul>
-            <form class="navbar-form navbar-right" @*role="search"*@>
+            <form class="navbar-form navbar-right">
                 <div class="form-group ">
                 @using (Html.BeginForm("Index", "Manager", FormMethod.Get, new { onsubmit = "return checkInput()" }))
                 {
                     @Html.TextBox("searchString", "", htmlAttributes: new { @class = "form-control", @type = "text", @placeholder = "Seach...", @id = "seachtl" })
-                    <button type="submit" class="btn btn-primary" name="searchString"><img src="~/Content/Images/search.png" /></button>
-                    <button type="submit" class="btn">@Html.ActionLink("Upload", "Submit", "Manager")</button>
+                    <button type="submit" class="btn btn-custom-1" name="searchString"><img src="~/Content/Images/search.png" /></button>
+                    <button type="submit" class="btn btn-custom-1">@Html.ActionLink("Upload", "Submit", "Manager")</button>
                 }
                     <br />
-                    <div id="commentForm">
-                        <ul class="sb_dropdown" style="display: block;position:absolute; top:83px; padding-top:5px;">
+                    <div id="commentForm" style="display:none">
+                        <ul class="sb_dropdown" style="display: block;position:absolute; top:70px; padding-top:5px">
                             <li class="sb_filter" style="text-align:center;top:5px; color:#ffffff">Chuyên Đề</li>
                             <li>
                                 <input type="checkbox" />
@@ -77,7 +77,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a id="slideToggle" style="" onclick="javascript:toggleLayer('commentForm');" href="#">Tìm Kiếm Nâng Cao??</a>
+                    <a id="slideToggle" onclick="javascript:toggleLayer('commentForm');" href="#">Tìm Kiếm Nâng Cao??</a>
                 </div>
                 &nbsp;
             </form>
@@ -115,11 +115,12 @@
             elem = document.layers[whichLayer];
         vis = elem.style;
         // if the style.display value is blank we try to figure it out here
-        if (vis.display == '' && elem.offsetWidth != undefined && elem.offsetHeight != undefined)
-            vis.display = (elem.offsetWidth != 0 && elem.offsetHeight != 0) ? 'block' : 'none';
+        //if (vis.display == '' && elem.offsetWidth != undefined && elem.offsetHeight != undefined)
+            //vis.display = (elem.offsetWidth != 0 && elem.offsetHeight != 0) ? 'none' : 'none';
         vis.display = (vis.display == '' || vis.display == 'block') ? 'none' : 'block';
     }
 </script>
 <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+<link href="~/Content/style.css" rel="stylesheet" />
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")

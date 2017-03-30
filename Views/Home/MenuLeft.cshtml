@@ -6,36 +6,19 @@
 <div class="example">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <a href="#" class="list-group-item active">
-                    Trang Chủ
-                </a>
-                <ul class="list-group">
+            <div class="col-xs-12 col-md-12" style="background:	#B22222;margin:0 auto;width:960px;padding:0px"> 
+                <ul class="nav nav-tabs">
+                    <li><a class="colorwhite" href="#">Trang Chủ </a></li>
                     @foreach (var item in Model)
                     {
-                    <li class="list-group-item">
-                        @item.TenChuyenDe   
-                        <span class="label label-primary pull-right">234</span>
+                    <li>
+                        <a class="colorwhite" href="#">@item.TenChuyenDe</a>
                     </li>
                     }
                 </ul>
             </div>
         </div>
-        @*<div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li><a href="">@Html.ActionLink("Trang Chủ","Index","Home")</a></li>
-                </ul>
-            @foreach (var item in Model)
-            {
-                <ul class="nav nav-tabs">
-                    <li><a href="">@item.TenChuyenDe</a></li>
-                </ul>
-            }
-            </div>
-        </div>*@
     </div>
 </div>      
-
-
-
+<link href="~/Content/style.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
