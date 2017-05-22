@@ -170,6 +170,7 @@ E:\WWW\DocShare\obj\Debug\DocShare.pdb
 E:\WWW\DocShare\obj\Debug\DocShare.Migrations.docshare2003.resources
 E:\WWW\DocShare\obj\Debug\DocShare.csproj.GenerateResource.Cache
 E:\WWW\DocShare\obj\Debug\DocShare.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\Exercises\DA\WWW\DocShare\bin\ApplicationInsights.config
 D:\Exercises\DA\WWW\DocShare\bin\roslyn\csc.exe
 D:\Exercises\DA\WWW\DocShare\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -342,3 +343,5 @@ D:\WWW\WWW\DocShare\obj\Debug\DocShare.csproj.GenerateResource.Cache
 D:\WWW\WWW\DocShare\obj\Debug\DocShare.dll
 D:\WWW\WWW\DocShare\obj\Debug\DocShare.pdb
 D:\WWW\WWW\DocShare\obj\Debug\DocShare.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6

@@ -252,11 +252,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+<<<<<<< HEAD
     <Content Include="Content\css1.css" />
     <Content Include="Content\css2.css" />
+=======
+    <Content Include="Content\css\font-awesome.min.css" />
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\1486481340_xmag.png" />
+<<<<<<< HEAD
     <Content Include="Content\Images\16998989_479119868879071_8567762297182999449_n.jpg" />
+=======
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
     <Content Include="Content\Images\17571820_658670074316436_450607740_o.png" />
     <Content Include="Content\Images\17622867_658672507649526_198113921_o.png" />
     <Content Include="Content\Images\206821.jpg" />
@@ -297,6 +305,10 @@
     <Content Include="Content\Images\up.png" />
     <Content Include="Content\Images\vector_539_13-48.png" />
     <Content Include="Content\style.css" />
+<<<<<<< HEAD
+=======
+    <Content Include="Content\StyleSheet.css" />
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -305,7 +317,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
     <Content Include="Content\vidu.json" />
+=======
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\home.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -393,10 +413,13 @@
     <Content Include="Views\Manager\SeachAdvanced.cshtml" />
     <Content Include="Views\Shared\_LayoutDemo.cshtml" />
     <Content Include="Views\Shared\_LayoutMember.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\TaiLieu\Listing.cshtml" />
     <Content Include="Views\DangNhap\vidu.cshtml" />
     <Content Include="Views\Manager\Detail.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+=======
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

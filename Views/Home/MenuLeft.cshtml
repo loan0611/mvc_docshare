@@ -3,6 +3,7 @@
     ViewBag.Title = "MenuLeft";
 }
 
+<<<<<<< HEAD
        <div class="row" style="margin-bottom: 0px;">
     <div class="col-xs-12 col-md-12" style="background:	#0080FF;margin:0 auto;width:960px;height:40px;padding:0px;border:0px">
         <ul class="nav nav-tabs">
@@ -17,5 +18,24 @@
     </div>
 </div>
  
+=======
+<div class="example">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12" style="background:	#B22222;margin:0 auto;width:960px;padding:0px"> 
+                <ul class="nav nav-tabs">
+                    <li><a class="colorwhite" href="#">Trang Chủ </a></li>
+                    @foreach (var item in Model)
+                    {
+                    <li>
+                        <a class="colorwhite" href="#">@item.TenChuyenDe</a>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>      
+>>>>>>> eb50b25b8f7ffc13470be45218144ffe6ee310f6
 <link href="~/Content/style.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
