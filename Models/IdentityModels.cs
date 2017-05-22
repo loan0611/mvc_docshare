@@ -23,7 +23,7 @@ namespace DocShare.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DocShare", throwIfV1Schema: false)
+            : base("DocShare2", throwIfV1Schema: false)
         {
 
         }

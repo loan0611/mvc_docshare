@@ -29,5 +29,13 @@ namespace DocShare.Controllers
         {
             return View();
         }
+        public ActionResult vd()
+        {
+            return View();
+        }
+        public ActionResult vidu()
+        {
+            return View();
+        }
     }
 }

@@ -1,42 +1,177 @@
-﻿@using PagedList;
-@using PagedList.Mvc;
+﻿@using PagedList.Mvc;
 @using DocShare.Models;
-@model PagedList.PagedList<TaiLieu>
+@model HomeViewModel
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    int pageSize = ViewBag.PageSize;
-    string searchString = ViewBag.SearchString;
 }
-
-<div class="container">
-    @*<div>
-            @ViewBag.ThongBao
-        </div>*@
-    <div class="modal-header">
-        <select id="sort" name="Sort" style="float:right">
-            <option value="">--Choose--</option>
-            <option value="0">Ngày upload</option>
-            <option value="1">Lượt rating</option>
-            <option selected="selected" value="2">All</option>
-        </select>
-        <label>All: </label><br />
-    </div>
-    @foreach (var item in Model)
-    {
-        <div class="row">
-            <div class="col-xs-12 col-sm-4">
-                <img src="@item.Anh" height="300" width="200" style="margin:5px" />
-            </div>
-            <div class="col-xs-12 col-sm-8" style="top:20px">
-                <p style="top:20px">@item.NhanDe</p>
-                @Html.ActionLink("Xem chi tiết...", "Detail", new { controller = "TaiLieu", id = item.MaTaiLieu })<br />
+<div class="row">
+    <div class="col-xs-12 col-md-6" style="top:10px;padding:10px">
+        <div style="position:relative">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.First().MaTaiLieu})">
+                <img height="310" width="100%" src="@Model.TaiLieuMoi.First().Anh" />
+            </a>
+            <div class="labletl">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.First().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuNoiBat.First().LuotXem | Luot down</p>
             </div>
         </div>
-    }
-    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+    </div>
+    <div class="col-xs-12 col-md-3" style="top:10px; padding:5px">
+        <div style="position:relative;padding:5px">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(1).First().MaTaiLieu})">
+                <img height="150" width="100%" src="@Model.TaiLieuMoi.Skip(1).First().Anh" />
+            </a>
+            <div class="ph">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(1).FirstOrDefault().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(1).First().LuotXem | Luot down</p>
+            </div>
+        </div>
+        <div style="position:relative;padding:5px">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(2).First().MaTaiLieu})"><img height="150" width="100%" src="@Model.TaiLieuMoi.Skip(2).First().Anh" /></a>
+            <div class="ph">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(2).FirstOrDefault().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(2).First().LuotXem  | Luot down</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3" style="top:10px;padding:5px">
+        <div style="position:relative;padding:5px">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(3).First().MaTaiLieu})"><img height="150" width="100%" src="@Model.TaiLieuMoi.Skip(3).First().Anh" /></a>
+            <div class="ph">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(3).FirstOrDefault().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(3).First().LuotXem  | Luot down</p>
+            </div>
+        </div>
+        <div style="position:relative;padding:5px">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(4).First().MaTaiLieu})"> <img height="150" width="100%" src="@Model.TaiLieuMoi.Skip(4).First().Anh" /></a>
+            <div class="ph">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(4).FirstOrDefault().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(4).First().LuotXem  | Luot down</p>
+            </div>
+        </div>
+    </div>
 </div>
-@*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / Model.PageCount)*@
 
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, pageSize = pageSize, searchString = searchString }))
+<div class="row">
+    <h3 class="font"><i class="fa fa-book" aria-hidden="true"></i> Tài Liệu Nổi Bật</h3>
+    <div class="col-xs-12 col-md-4">
+        <div style="position:relative">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(5).First().MaTaiLieu})"><img height="310" width="100%" src="@Model.TaiLieuMoi.Skip(5).First().Anh" /></a>
+            <div class="labletl">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(5).First().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(5).First().LuotXem  | Luợt down</p>
+            </div>
+        </div>
+        <div>
+            <table style="border:0px">
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuMoi.Skip(6).First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(6).First().MaTaiLieu})">@Model.TaiLieuMoi.Skip(6).First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:@Model.TaiLieuMoi.First().NgayUpload </p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuMoi.Skip(6).First().LuotXem </p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuMoi.Skip(7).First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "ManagerManager", id = Model.TaiLieuMoi.Skip(7).First().MaTaiLieu})">@Model.TaiLieuMoi.Skip(7).First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:</p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuMoi.Skip(7).First().LuotXem </p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div style="position:relative">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(8).First().MaTaiLieu})"> <img height="310" width="100%" src="@Model.TaiLieuMoi.Skip(8).First().Anh" /></a>
+            <div class="labletl">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(8).First().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(8).First().LuotXem  | Luot down</p>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuMoi.Skip(9).First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(9).First().MaTaiLieu})">@Model.TaiLieuMoi.Skip(9).First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:</p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuMoi.Skip(9).First().LuotXem </p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuMoi.Skip(10).First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(10).First().MaTaiLieu})">@Model.TaiLieuMoi.Skip(10).First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:</p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuMoi.Skip(10).First().LuotXem </p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div style="position:relative">
+            <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuMoi.Skip(11).First().MaTaiLieu})"> <img height="310" width="100%" src="@Model.TaiLieuMoi.Skip(11).First().Anh" /></a>
+            <div class="labletl">
+                <a href="#"><label class="colorwhite">@Model.TaiLieuMoi.Skip(11).First().NhanDe</label></a>
+                <p class="colorwhite">Luợt xem:@Model.TaiLieuMoi.Skip(11).First().LuotXem  | Lu?t down</p>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuNoiBat.First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.First().MaTaiLieu})">@Model.TaiLieuNoiBat.First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:</p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuNoiBat.First().LuotXem</p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px"><img height="100" width="100" src="@Model.TaiLieuNoiBat.Skip(1).First().Anh" /></td>
+                    <td>
+                        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.Skip(1).First().MaTaiLieu})">@Model.TaiLieuNoiBat.Skip(1).First().NhanDe</a>
+                        <p class="colorgrey">Ngày Upload:</p>
+                        <p class="colorgrey">Luợt xem:@Model.TaiLieuNoiBat.Skip(1).First().LuotXem</p>
+                        <p class="colorgrey">Luợt down</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h3 class="font "><i class="fa fa-book" aria-hidden="true"></i>Tài Liệu Mới </h3>
+    <div class="col-xs-12 col-md-3">
+        <img class="img" height="300" width="200" src="@Model.TaiLieuNoiBat.Skip(2).First().Anh" />
+        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.Skip(2).First().MaTaiLieu})"><p class="fomat a1">@Model.TaiLieuNoiBat.Skip(2).First().NhanDe</p></a>
+        <p class="img colorgrey">Luợt xem:@Model.TaiLieuNoiBat.Skip(2).First().LuotXem | Luot down:</p>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <img class="img" height="300" width="200" src="@Model.TaiLieuNoiBat.Skip(3).First().Anh" />
+        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.Skip(3).First().MaTaiLieu})"><p class="fomat">@Model.TaiLieuNoiBat.Skip(3).First().NhanDe</p></a>
+        <p class="img colorgrey">Luợt xem:@Model.TaiLieuNoiBat.Skip(3).First().LuotXem | Luot down:</p>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <img class="img" height="300" width="200" src="@Model.TaiLieuNoiBat.Skip(4).First().Anh" />
+        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.Skip(4).First().MaTaiLieu})"><p class="fomat">@Model.TaiLieuNoiBat.Skip(4).First().NhanDe</p></a>
+        <p class="img colorgrey">Luợt xem:@Model.TaiLieuNoiBat.Skip(4).First().LuotXem | Luot down:</p>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <img class="img" height="300" width="200" src="@Model.TaiLieuNoiBat.Skip(5).First().Anh" />
+        <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.TaiLieuNoiBat.Skip(5).First().MaTaiLieu})"><p class="fomat">@Model.TaiLieuNoiBat.Skip(5).First().NhanDe</p></a>
+        <p class="img colorgrey">Luợt xem:@Model.TaiLieuNoiBat.Skip(5).First().LuotXem | Luot down:</p>
+    </div>
+</div>
+

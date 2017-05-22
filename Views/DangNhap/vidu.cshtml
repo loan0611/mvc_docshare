@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "vidu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>vidu</h2>
+
+<div id="stage">
+</div>
+
+<input type="button" id="driver" value="Load Data" />
+
+<script>
+    $(document).ready(function () {
+
+        $("#driver").click(function (event) {
+            $.getJSON('http://docshare.com/Content/vidu.json', function (jd) {
+                $('#stage').html('<p> Name: ' + jd.name + '</p>');
+                $('#stage').append('<p>Age : ' + jd.age + '</p>');
+                $('#stage').append('<p> Sex: ' + jd.sex + '</p>');
+            });
+        });
+
+    });
+</script>

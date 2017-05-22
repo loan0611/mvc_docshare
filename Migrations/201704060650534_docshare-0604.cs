@@ -3,7 +3,7 @@ namespace DocShare.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class docshare2003 : DbMigration
+    public partial class docshare0604 : DbMigration
     {
         public override void Up()
         {

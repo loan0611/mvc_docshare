@@ -16,7 +16,7 @@ namespace DocShare.Models
         public bool GioiTinh { get; set; }
         public string Email { get; set; }
         public DateTime NgayDangKy { get; set; }
-        public string QuyenHan { get; set; }
+        public int MaQH { get; set; }
 
         public virtual ICollection<LichSuDownload> LichSuDownloads { get; set; }
 

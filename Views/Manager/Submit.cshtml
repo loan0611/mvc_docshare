@@ -5,7 +5,7 @@
 }
 <h2>Submit</h2>
 
-@using (Html.BeginForm("Submit", "Manager", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Submit", "Manager", FormMethod.Post, new { enctype = "multipart/form-data",onsubmit = "return check() ", @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <hr />
@@ -22,7 +22,7 @@
             Số Trang
         </label>
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.SoTrang, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.SoTrang, new { @class = "form-control", type = "number" })
         </div>
     </div>
     <div class="row">
@@ -30,7 +30,7 @@
             Phi
         </label>
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Phi, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.Phi, new { @class = "form-control", type = "number" })
         </div>
     </div>
     <div class="row">
@@ -62,7 +62,7 @@
             Anh
         </label>
         <div class="col-md-10">
-            <input type="file" id="" name="image" />
+            <input type="file" id="image" name="image" />
         </div>
     </div>
     <div class="row">
@@ -70,7 +70,7 @@
             Tai Lieu
         </label>
         <div class="col-md-10">
-            <input type="file" id="" name="file" />
+            <input type="file" id="file" name="file" />
         </div>
     </div>
     <div class="row">
@@ -87,3 +87,4 @@
         </div>
     </div>
 }
+<script src="~/Scripts/Jsda.js"></script>

@@ -19,7 +19,6 @@ namespace DocShare.Controllers
             DBContext = new ApplicationDbContext();
         }
 
-        //[HttpPost]
         public ActionResult Index(int? page, int? pageSize, string searchString)
         {   
             int limit = 4;
@@ -40,9 +39,41 @@ namespace DocShare.Controllers
             return View(query.OrderBy(n => n.NgayUpload).ToPagedList(pagenumber, limit));
 
         }
-        public ActionResult SeachAdvanced()
+
+        public ActionResult Download(HttpPostedFileBase file)
         {
+           
+            var pathFileDirectory = Server.MapPath("/Content/Documents");
+            if (!System.IO.Directory.Exists(pathFileDirectory))
+            {
+                System.IO.Directory.CreateDirectory(pathFileDirectory);
+            }
+            //string[] files = Directory.GetFiles(Server.MapPath("/Files"));
+            var pathFile = string.Empty;
+            var fileSize = 0;
+            if (file != null)
+            {
+                fileSize = file.ContentLength;
+                pathFile = Path.Combine("/Content/Documents", file.FileName);
+                file.SaveAs(Server.MapPath(pathFile));
+            }
             return View();
+        }
+
+        [HttpPost]
+        public FileResult DownloadFile(string fileName)
+        {
+            var filepath = System.IO.Path.Combine(Server.MapPath("/Files/"), fileName);
+            return File(filepath, MimeMapping.GetMimeMapping(filepath), fileName);
+        }
+        public ActionResult Detail(int id)
+        {
+            var tailieu = DBContext.TaiLieus.FirstOrDefault(x => x.MaTaiLieu == id);
+            //truoc khi return thi tang luot xem len 1
+            tailieu.LuotXem = tailieu.LuotXem + 1;
+            DBContext.SaveChanges();
+            //
+            return View(tailieu);
         }
         // GET: Manager
         public ActionResult Submit()

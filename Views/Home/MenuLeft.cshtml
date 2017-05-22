@@ -3,39 +3,19 @@
     ViewBag.Title = "MenuLeft";
 }
 
-<div class="example">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <a href="#" class="list-group-item active">
-                    Trang Chủ
-                </a>
-                <ul class="list-group">
-                    @foreach (var item in Model)
-                    {
-                    <li class="list-group-item">
-                        @item.TenChuyenDe   
-                        <span class="label label-primary pull-right">234</span>
-                    </li>
-                    }
-                </ul>
-            </div>
-        </div>
-        @*<div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li><a href="">@Html.ActionLink("Trang Chủ","Index","Home")</a></li>
-                </ul>
+       <div class="row" style="margin-bottom: 0px;">
+    <div class="col-xs-12 col-md-12" style="background:	#0080FF;margin:0 auto;width:960px;height:40px;padding:0px;border:0px">
+        <ul class="nav nav-tabs">
+            <li>@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
             @foreach (var item in Model)
             {
-                <ul class="nav nav-tabs">
-                    <li><a href="">@item.TenChuyenDe</a></li>
-                </ul>
+                <li>
+                    @Html.ActionLink(@item.TenChuyenDe, "Listing", "TaiLieu")
+                </li>
             }
-            </div>
-        </div>*@
+        </ul>
     </div>
-</div>      
-
-
-
+</div>
+ 
+<link href="~/Content/style.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />

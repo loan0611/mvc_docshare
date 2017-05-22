@@ -1,52 +1,37 @@
 ﻿@model DocShare.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
+    Layout = null;
 }
-
-<h2>@ViewBag.Title.</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.Label("User Name", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
+    <header>@Html.ActionLink("DocShare.com", "Index", "Home", new { @class = "link1" }) - Register</header>
+    <label for="usermail">Email<span>*</span></label>
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Email, new { @class = "input_a", placeholder = "yourname@email.com" })
     </div>
-    <div class="form-group">
-        @Html.Label("Password", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
+    <label>Password <span>*</span></label>
+    <div class="col-md-10">
+        @Html.PasswordFor(m => m.Password, new { @class = "input_a", placeholder = "Password" })
     </div>
-    <div class="form-group">
-        @Html.Label("ConfirmPassword", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
+    <label>Confirm password<span>*</span></label>
+    <div class="col-md-10">
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "input_a", placeholder = "Password" })
     </div>
-    <div class="form-group">
-        @Html.Label("Full Name", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
-        </div>
+    <label>Name<span>*</span></label>
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.FullName, new { @class = "input_a", placeholder = "Name" })
     </div>
-    <div class="form-group">
-        @Html.Label("Gender", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
+    <label>Gender<span>*</span></label>
+        @Html.TextBoxFor(m => m.Gender, new { @class = "input_a", placeholder = "Gender" })
+    <div>
+        <button class="register">Register</button>
+        <button class="cancel">@Html.ActionLink("Cancel", "Index", "Home")</button>
     </div>
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<link href="~/Content/css2.css" rel="stylesheet" />

@@ -1,0 +1,128 @@
+﻿@model DocShare.Models.TaiLieu
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<div class="row">
+    <div class="col-xs-12 col-sm-2">
+        <p>@Html.ActionLink("Trang Chủ", "Index", "Home") </p>
+    </div>
+    <div class="col-xs-12 col-sm-10">
+        <p>@Model.NhanDe</p>
+    </div>
+</div>*@
+<div class="row">
+    <div class="col-xs-12 col-sm-5">
+        <div style="position:relative; margin-top:10px;">
+            <a href="#"> <img height="300" width="400" src="@Model.Anh" /></a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-7">
+        <h4 style="margin:15px">@Model.NhanDe</h4>
+        <div class="col-xs-12 col-sm-6">   
+            <table class="table table-bordered table-detail table-striped">
+                <tr>
+                    <td style="width:50%">Tác giả</td>
+                    <td>@Model.TacGia.TenTacGia</td>
+                </tr>
+                <tr>
+                    <td>Số Trang</td>
+                    <td>@Model.SoTrang</td>
+                </tr>
+                <tr>
+                    <td>Kích Thước</td>
+                    <td>200X19</td>
+                </tr>
+                <tr>
+                    <td>Người Upload</td>
+                    <td>NaNguyen</td>
+                </tr>
+                <tr>
+                    <td>Phí</td>
+                    <td>@Model.Phi</td>
+                </tr>
+            </table>
+            @Html.ActionLink("Download", "Download",new {Controller = "Download", id = Model.MaTaiLieu })
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <table class="table table-bordered table-detail table-striped">
+                <tr>
+                    <td style="width:50%">Đánh Giá </td>
+                    <td><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Lượt Xem</td>
+                    <td>@Model.LuotXem</td>
+                </tr>
+                <tr>
+                    <td>Lượt Down</td>
+                    <td>@Model.SoLanDownload</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+    <button type="submit" class="btn btn-custom-1">Mô Tả</button>
+    <a href="#"><h4 style="text-align:center">Đối mặt với khó khăn trong cuộc sống</h4></a>
+    <p style="text-align:left">Trên đường đời ai ai cũng sẽ gặp một lần vấp ngã và thất bại trong cuộc sống. Thành công hay thất bại chính là những lần vấp ngã này sẽ quyết định cuộc đời của bạn: Nếu vì thất bại mà bạn mất tự tin, chán nản và thất vọng về bản thân thì bạn đã thất bại hoàn toàn rồi đấy. Cuộc sống không bao giờ bằng phẳng và có những con đường rải hoa cho bạn bước đi, đường đời luôn có rất nhiều chông gai  những khó khăn trong cuộc sống chính là cơ hội để bạn nhận thấy được những sai sót khiếm khuyết của bản thân để rèn luyện, sửa chữa và trưởng thành hơn đấy.</p>
+    <p>Tự tin vững bước đối mặt với khó khăn thách thức trong cuộc sống sẽ là vận hội mới giúp bạn vượt qua những thử thách và đạt được những thành công mục tiêu mà bạn mong muốn.</p>
+    <p>Khi gặp khó khăn và thử thách hãy vững tin vào góc tâm hồn và khả năng của bản thân thể hiện năng lực của bạn để vượt qua thử thách với 7 điều nên làm sau:</p>
+    <h3>1. Dũng đảm</h3>
+    <p>Khi đối mặt với khó khăn, dũng cảm là tinh thần quan trọng nhất để giúp bản thân bạn có đủ niềm tin và can đảm đương đầu với những khó khăn nghịch cảnh mà bạn đang gặp phải. Vận mệnh là do chính bạn quyết định, dũng cảm đối mặt với thử thách để không đánh mất hy vọng vào tương lai, nếu bạn đánh mất hy vọng và niềm tin của bản thân bạn sẽ mất tất cả và bạn đã bị cuộc đời đánh bại.
+
+        Hãy xem mỗi thời gian khoảng mắt mà bạn đang có đều là những phút giây cuối cùng, biến những trở ngại, những tức giận, những đau khổ thành nỗ lực để vững tin vào ý chí của chính mình và tiếp tục chiến đấu cho cuộc sống, hạnh phúc của bạn.
+    </p>
+    <h3>2. Suy xét thật kỹ</h3>
+    <p>
+        Mỗi thất bại trong cuộc sống đều có nguyên nhân gây ra, và trách nhiệm của bạn chính là dũng cảm nhìn nhận lại bản thân để tìm ra nguyên nhân của thất bại. Hạy mạnh dạn chấp nhận sự thật là mình đã sai lầm, tư duy và chiến lược của mình có vấn đề hãy tham khảo những quan điểm góc nhìn của người khác để nhận ra được sai lầm của bản thân.
+
+        Phá bỏ tư duy cũ, mạnh dạn áp dụng những tư duy mới xác định những mục tiêu ngắn hạn hơn và từng bước tiến lên phía trước.
+    </p>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <input type="text" style="height:60px; width:350px" />
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <button type="button" class="btn btn-primary" style="margin-top:14px; margin-left:40px; height:30px;width:100px">Bình Luận</button>
+    </div>
+</div>
+<div class="row">
+   <div class="col-xs-12 col-sm-1">
+       <img class="img-circle" width="40" height="40" src="~/Content/Images/16998989_479119868879071_8567762297182999449_n.jpg" />      
+   </div>
+    <div class="col-xs-12 col-sm-11">
+        <p>NaNguyen</p>
+        <p>Tài liệu hay lắm</p>
+        <a href="#" style="padding:5px">Trả lời </a>
+        <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>4</a>
+        <a style="padding:5px" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-1">
+        <img class="img-circle" width="40" height="40" src="~/Content/Images/16998989_479119868879071_8567762297182999449_n.jpg" />
+    </div>
+    <div class="col-xs-12 col-sm-11">
+        <p>NaNguyen</p>
+        <p>Tài liệu hay lắm</p>
+        <a href="#" style="padding:5px">Trả lời </a>
+        <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>4</a>
+        <a style="padding:5px" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-1">
+        <img class="img-circle" width="40" height="40" src="~/Content/Images/16998989_479119868879071_8567762297182999449_n.jpg" />
+    </div>
+    <div class="col-xs-12 col-sm-11">
+        <p>NaNguyen</p>
+        <p>NaNguyen</p>
+        <a href="#" style="padding:5px">Trả lời </a>
+        <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>4</a>
+        <a style="padding:5px" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+</div>

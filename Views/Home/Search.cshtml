@@ -1,0 +1,35 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using DocShare.Models;
+@model PagedList.PagedList<TaiLieu>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int pageSize = ViewBag.PageSize;
+    string searchString = ViewBag.SearchString;
+}
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-12 col-md-6" style="top:10px;padding:10px">
+            <div style="position:relative">
+                <a href="@Url.Action( "Detail",new { controller = "Manager", id = Model.First().MaTaiLieu})">
+                    <img height="310" width="100%" src="@Model.First().Anh" />
+                </a>
+                <div class="labletl">
+                    <a href="#"><label class="colorwhite">@Model.First().NhanDe</label></a>
+                    <p class="colorwhite">Lượt xem:@Model.First().LuotXem | Lượt down</p>
+                </div>
+            </div>
+        </div>
+    }
+    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+</div>
+@*Trang @((Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / Model.PageCount)*@
+
+@Html.PagedListPager(Model, page => Url.Action("Search", new { page = page, pageSize = pageSize, searchString = searchString }))
+
+
+
+

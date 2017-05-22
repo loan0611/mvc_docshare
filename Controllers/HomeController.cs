@@ -14,9 +14,9 @@ namespace DocShare.Controllers
         {
             DBContext = new ApplicationDbContext();
         }
-        public ActionResult Index(int? page, int? pageSize, string searchString)
+        public ActionResult Search(int? page, int? pageSize, string searchString)
         {
-            int limit = 4;
+            int limit = 20;
             if (pageSize != null)
             {
                 limit = pageSize.Value;
@@ -31,10 +31,19 @@ namespace DocShare.Controllers
                 query = query.Where(x => x.NhanDe.Contains(searchString));
             }
 
-            return View(DBContext.TaiLieus.Where(x => x.PheDuyet).OrderBy(x => x.NgayUpload).ToPagedList(pagenumber,limit));
+            return View(query.Where(x => x.PheDuyet).OrderBy(n => n.MaTaiLieu).Take(2).ToPagedList(pagenumber, limit));
 
         }
-        
+
+        public ActionResult Index()
+        {
+            var model = new HomeViewModel();
+            model.TaiLieuMoi = DBContext.TaiLieus.Where(x => x.PheDuyet).OrderBy(x => x.NgayUpload).Take(50).ToList();
+            model.TaiLieuNoiBat = DBContext.TaiLieus.Where(x => x.PheDuyet).OrderBy(x => x.NgayUpload).Take(6).ToList();
+            return View(model);
+
+
+        }
 
         public ActionResult Manager()
         {
