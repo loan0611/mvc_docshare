@@ -44,12 +44,6 @@ namespace DocShare.Controllers
 
 
         }
-
-        public ActionResult Manager()
-        {
-            return View();
-
-        }
         public ActionResult MenuLeft()
         {
             var chuyende = DBContext.ChuyenDes.ToList();
